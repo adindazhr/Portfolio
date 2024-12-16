@@ -26,6 +26,7 @@ section {
 }
 
 body {
+  @apply bg-gray-100 text-gray-800 font-sans leading-relaxed;
   margin: 0;
   padding: 0;
   background-image: url('/Background-Portfolio-2.png');
@@ -70,4 +71,31 @@ h1, h2, h3, .heading-font {
 /* Correct the parent container's margin */
 .slick-list {
   padding: 0 -30px;
+}
+
+.container {
+  @apply w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+
+@layer base {
+  h1 {
+    @apply text-7xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl;
+  }
+
+  h2 {
+    @apply text-5xl sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl;
+  }
+
+  h3 {
+    @apply text-3xl sm:text-base md:text-lg lg:text-xl xl:text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl sm:text-sm md:text-base lg:text-lg xl:text-2xl;
+  }
+
+  p {
+    @apply text-xl sm:text-sm md:text-base lg:text-lg xl:text-xl;
+  }
 }

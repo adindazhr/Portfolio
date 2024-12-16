@@ -68,6 +68,12 @@ export default function Works() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const openPopup = (project) => {
+
+    const worksSection = document.getElementById('works-section');
+    if (worksSection) {
+      worksSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     setSelectedProject(project);
     setIsPopupOpen(true);
     console.log("Selected project:", project);
@@ -85,25 +91,25 @@ export default function Works() {
 
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center py-16">
+    <div id="works-section" className="container min-h-screen flex flex-col justify-center items-center py-16">
       {/* Title */}
-      <h2 className="text-5xl font-bold mb-12 text-gray-800">Works</h2>
+      <h2 className="font-bold mb-12 text-gray-800">Works</h2>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full px-6 max-w-6xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full px-6 max-w-6xl">
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`h-56 relative p-6 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 bg-gradient-to-br ${project.gradient}`}
+            className={`h-44 sm:h-52 md:h-56 relative p-4 sm:p-5 md:p-6 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 bg-gradient-to-br ${project.gradient}`}
             style={{
               clipPath: 'url(#waveClip)', // apply the clip-path using the SVG wave
             }}
             onClick={() => openPopup(project)} // Add onClick handler to the card
           >
             {/* Project Title */}
-            <h3 className="text-white text-2xl font-bold relative z-10">
+            <h4 className="text-white font-bold relative z-10">
               {project.title}
-            </h3>
+            </h4>
 
             {/* Add the SVG wave */}
             <svg width="413" height="300" viewBox="50 0 413 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +121,7 @@ export default function Works() {
               <path fillRule="evenodd" clipRule="evenodd" d={project.waveSVG} fill={`url(#imgPattern${index})`} transform="translate(100, 5)" />
             </svg>
           </div>
-        ))} 
+        ))}
       </div>
 
       {isPopupOpen && selectedProject && (

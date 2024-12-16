@@ -86,7 +86,7 @@ export default function Skills() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center px-6 w-5/6">
       <div className="mt-12">
-        <h2 className="text-5xl font-spaceGrotesk leading-tight font-bold text-gray-800 mb-8">
+        <h2 className="font-spaceGrotesk leading-tight font-bold text-gray-800 mb-8">
           Skills
         </h2>
       </div>
@@ -96,8 +96,8 @@ export default function Skills() {
             skill ? (
               <div key={index} className="flex flex-col justify-center items-center bg-white/30 backdrop-blur-md border border-gray-200 rounded-lg p-6 min-h-[400px] mx-auto">
                 <img src={`/${skill.icon_names}.svg`} alt={skill.skill_name} className="text-8xl mx-auto" />
-                <h3 className="mt-4 text-3xl font-bold text-gray-800 p-2 text-center">{skill.skill_name}</h3>
-                <p className="text-center text-xl text-gray-600 p-1">{skill.description}</p>
+                <h3 className="mt-4 font-bold text-gray-800 p-2 text-center">{skill.skill_name}</h3>
+                <p className="text-center text-gray-600 p-1">{skill.description}</p>
               </div>
             ) : (
               <div key={index} className="p-6">Loading...</div>

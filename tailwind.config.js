@@ -15,6 +15,7 @@ module.exports = {
         sans: ['Source Sans Pro', 'sans-serif'], // Set as default sans-serif font
         spaceGrotesk: ['Space Grotesk', 'sans-serif'], // Add custom font
       },
+      
     },
   },
   plugins: [],

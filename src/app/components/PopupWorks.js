@@ -62,7 +62,7 @@ const PopupWorks = ({ isPopupOpen, closePopup, works, selectedWorkIndex }) => {
   };
 
   return (
-    <div className="fixed w-screen h-screen bg-black bg-opacity-50 z-[9999] flex justify-center items-center">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-[9999] flex justify-center items-center">
       {/* Prev Work Arrow */}
       <div className="absolute left-40 bottom-20 bg-gray-200 text-gray-700 px-4 py-2 rounded-full cursor-pointer hover:bg-gray-300 z-20 flex items-center space-x-2" onClick={handlePrevWork}>
         <span className="font-semibold">Prev Work</span>
@@ -128,7 +128,7 @@ const PopupWorks = ({ isPopupOpen, closePopup, works, selectedWorkIndex }) => {
 
         {/* Right Section: Details */}
         <div className="w-full md:w-1/2 p-4">
-          <h3 className="text-3xl font-bold mb-4">{title}</h3>
+          <h3 className="font-bold mb-4">{title}</h3>
           <p className="text-lg mb-4">{description}</p>
 
           {/* Skills */}

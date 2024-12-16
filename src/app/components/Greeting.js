@@ -14,15 +14,15 @@ export default function Greeting() {
   return (
     <div className="min-h-screen flex flex-col justify-between px-20 w-5/6 pt-32">
       {/* Top Section */}
-      <div className="flex items-center justify-between w-full h-full">
+      <div className="container flex items-center justify-between w-full h-full">
         {/* Left Side */}
         <div className="w-1/2 space-y-4">
-          <h1 className="text-7xl font-spaceGrotesk leading-tight font-bold text-gray-800">
+          <h1 className="font-spaceGrotesk leading-tight font-bold text-gray-800">
             Hello, I'm Adinda
           </h1>
-          <p className="text-2xl font-semibold font-sans text-gray-600">
+          <h4 className="font-semibold font-sans text-gray-600">
             AI Engineer | Frontend Developer | Game Developer
-          </p>
+          </h4>
 
           {/* Social Media Icons */}
           <div className="flex space-x-6">
